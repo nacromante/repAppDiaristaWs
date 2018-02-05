@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="SeriveDiarista">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+
+		<class>com.appdiarista.model.Usuario</class>
+		<class>com.appdiarista.model.TipoUsuario</class>
+<!-- 		<class>com.appdiarista.model.Contratante</class> -->
+<!-- 		<class>com.appdiarista.model.Contrato</class> -->
+<!-- 		<class>com.appdiarista.model.Diaria</class> -->
+<!-- 		<class>com.appdiarista.model.Diarista</class> -->
+		
+		<properties>
+		
+			<!-- poderia ser: create,create-drop -->
+			
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/appDiarista" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="1717" />
+		
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			
+ 		
+			<property name="testConnectionOnCheckout" value="true" />
+			<property name="com.mchange.v2.c3p0.Debug.DEBUG" value="true" />
+            
+		</properties>
+	</persistence-unit>
+</persistence>
